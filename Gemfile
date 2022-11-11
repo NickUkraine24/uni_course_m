@@ -56,4 +56,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "haml-rails", "~> 2.0"
-gem 'html2haml', '~> 2.3'
+gem 'html2haml', "~> 2.3"
+
+gem 'simple_form', "~> 5.0"
