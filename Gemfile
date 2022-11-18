@@ -61,3 +61,5 @@ gem 'html2haml', "~> 2.3"
 gem 'simple_form', "~> 5.0"
 
 gem 'faker', "~> 1.6"
+
+gem 'devise', "~> 4.8"
