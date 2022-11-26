@@ -11,3 +11,5 @@ User.create!(email: "test@test.com", password: "123456", password_confirmation: 
     user_id: User.first.id
   }])
 end
+
+User.create!(email: "admin@admin.com", password: "123456", password_confirmation: "123456")
