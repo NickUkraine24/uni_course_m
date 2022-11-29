@@ -63,3 +63,5 @@ gem 'simple_form', "~> 5.0"
 gem 'faker', "~> 1.6"
 
 gem 'devise', "~> 4.8"
+
+gem 'friendly_id', "~> 5.1"
