@@ -6,9 +6,13 @@ User.create!(email: "test@test.com", password: "123456", password_confirmation: 
 
 30.times do
   Course.create!([{
-    title: Faker::DcComics.title,
-    description: Faker::Quote.matz,
-    user_id: User.first.id
+    title: Faker::Educator.course_name,
+    description: Faker::TvShows::GameOfThrones.quote,
+    user_id: User.first.id,
+    short_description: Faker::Quote.famous_last_words,
+    language: Faker::ProgrammingLanguage.name,
+    level: 'Beginner',
+    price: rand(1000..20000)
   }])
 end
 
