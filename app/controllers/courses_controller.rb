@@ -3,9 +3,20 @@ class CoursesController < ApplicationController
 
   # GET /courses or /courses.json
   def index
-    return @courses = Course.all unless params[:title].present?
-
-    @courses = Course.where("title ILIKE ?", "%#{params[:title]}%")
+    ##
+    # NOTE:
+    # It's a good logic for understanding how `ILIKE` works and so I don't delete this code.
+    #
+    # unless params[:title].present?
+    #   #@courses = Course.all
+    #   @q = Course.ransack(params[:q])
+    #   @courses = @q.result.includes(:user)
+    # else
+    #   @courses = Course.where("title ILIKE ?", "%#{params[:title]}%")
+    # end
+    #
+    @ransack_courses = Course.ransack(params[:courses_search], search_key: :courses_search)
+    @courses = @ransack_courses.result.includes(:user)
   end
 
   # GET /courses/1 or /courses/1.json

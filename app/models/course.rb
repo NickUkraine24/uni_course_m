@@ -7,4 +7,15 @@ class Course < ApplicationRecord
 
   has_rich_text :description
   friendly_id :title, use: :slugged
+
+  LANGUAGES = [:"Ukrainian", :"English", :"Polish"]
+  LEVELS = [:"Beginner", :"Intermediate", :"Advanced"]
+
+  def self.languages
+    LANGUAGES.map { |language| [language, language] }
+  end
+
+  def self.levels
+    LEVELS.map { |level| [level, level] }
+  end
 end

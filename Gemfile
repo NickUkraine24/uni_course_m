@@ -65,3 +65,5 @@ gem 'faker', "~> 1.6"
 gem 'devise', "~> 4.8"
 
 gem 'friendly_id', "~> 5.1"
+
+gem 'ransack', '~> 3.0'
