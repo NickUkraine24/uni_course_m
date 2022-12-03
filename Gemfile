@@ -67,3 +67,5 @@ gem 'devise', "~> 4.8"
 gem 'friendly_id', "~> 5.1"
 
 gem 'ransack', '~> 3.0'
+
+gem 'public_activity', '~> 1.6'
