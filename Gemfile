@@ -71,3 +71,5 @@ gem 'ransack', '~> 3.0'
 gem 'public_activity', '~> 1.6'
 
 gem 'rolify', '~> 5.3'
+
+gem 'pundit', '~> 2.1'
