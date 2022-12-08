@@ -6,6 +6,11 @@ class Course < ApplicationRecord
   validates :description, presence: true, length: { :minimum => 5 }
   belongs_to :user
 
+  has_one_attached :avatar
+  validates :avatar, attached: true,
+            content_type: ['image/png', 'image/jpg', 'image/jpeg'],
+            size: { less_than: 500.kilobytes , message: 'size should be under 500 kilobytes' }
+
   has_rich_text :description
   friendly_id :title, use: :slugged
   tracked owner: Proc.new { |controller, _model| controller.current_user }

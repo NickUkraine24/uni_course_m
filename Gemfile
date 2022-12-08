@@ -73,3 +73,6 @@ gem 'public_activity', '~> 1.6'
 gem 'rolify', '~> 5.3'
 
 gem 'pundit', '~> 2.1'
+
+gem "aws-sdk-s3", require: false
+gem 'active_storage_validations', '~> 1.0'
